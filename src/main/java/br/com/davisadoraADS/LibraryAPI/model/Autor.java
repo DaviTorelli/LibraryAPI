@@ -16,7 +16,7 @@ public class Autor extends RepresentationModel {
     @Getter @Setter
     private String nome;
 
-    @Column (name= "nacionalidade", nullable = true, length = 50)
+    @Column (name= "nacionalidade", nullable = false, length = 50)
     @Getter @Setter
     private String nacionalidade;
 
