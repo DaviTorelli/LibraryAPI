@@ -15,6 +15,6 @@ public interface LivroRepository extends JpaRepository<Livro, Long> {
 
     public Page<Livro> findAll(Pageable page);
 
-    List<Livro> findByNameContainsIgnoreCaseOrderByName(String name);
+    List<Livro> findByNomeContainsIgnoreCaseOrderByNome(String nome);
 
 }
