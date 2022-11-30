@@ -14,7 +14,7 @@ public class Livro extends RepresentationModel {
 
     @Column (nullable = false, length = 13)
     @Getter @Setter
-    private long isbn;
+    private String isbn;
 
     @Column (nullable = false, length = 50)
     @Getter @Setter
