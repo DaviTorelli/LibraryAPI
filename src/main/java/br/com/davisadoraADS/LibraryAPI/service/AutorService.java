@@ -22,5 +22,26 @@ public class AutorService {
         return repository.findById(id);
     }
 
+    public Autor save(Autor model){
+        return repository.save(model);
+    }
 
+    public Autor update(Autor model){
+        var item = repository.findById(model.getId());
+        if(item.isPresent()){
+            item.get().setNome(model.getNome());
+            item.get().setNacionalidade(model.getNacionalidade());
+            item.get().setNascimento(model.getNascimento());
+            return repository.save(item.get());
+        }else{
+            return null;
+        }
+    }
+
+    public void delete(long id){
+        var item = repository.findById(id);
+        if(item.isPresent()){
+            repository.delete(item.get());
+        }
+    }
 }

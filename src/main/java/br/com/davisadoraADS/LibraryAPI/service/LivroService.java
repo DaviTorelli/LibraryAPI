@@ -35,6 +35,7 @@ public class LivroService {
             item.get().setData_lancamento(model.getData_lancamento());
             item.get().setTema(model.getTema());
             item.get().setPais(model.getPais());
+            item.get().setAutores(model.getAutores());
             return repository.save(item.get());
         }else{
             return null;
